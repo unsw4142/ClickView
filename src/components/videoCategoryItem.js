@@ -7,16 +7,17 @@ const VideoCategoryItem = (props) => {
     return <div><h2>Loading..</h2></div>;
   }
 
-  //const onCatgsSelect = props.onVideoSelect;
+  const onCategorySelect = props.onCategorySelect;
   const catgs = video.category.split("->");
-  const renderCatgs = catgs.map((catg,i) =>{
-    return <li key = {i}>{catg}</li>;
-  });
 
+  const renderCatgs = catgs.map((catg,i) =>{
+    return <div key = {i}>{catg}</div>;
+  });
+  // On selecting the category, the video changes.
   return(
-      <div className = "catgs-list">
+    <li onClick= {()=> {onCategorySelect(video)}}>
           {renderCatgs}
-      </div>
+    </li>
   );
 }
 export default VideoCategoryItem;

@@ -8,6 +8,7 @@ const VideoCategory = (props) => {
           <VideoCategoryItem
             key = {video.id}
             video= {video}
+            onCategorySelect = {props.onCategorySelect}
           />
         );
     });

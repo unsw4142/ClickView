@@ -13,6 +13,9 @@ class App extends Component{
     };
   }
   // At start, the slected video is the first video in the list
+  // Selecting the category video changes
+  // Category does not work as intended, just show all up and change the original video it is from.
+  
   render(){
     return(
       <div>
@@ -23,7 +26,9 @@ class App extends Component{
           videos = {videos}/>
         <div className= "categories">
           <div><h2>All Categories</h2></div>
-          <VideoCategory videos = {videos} />
+          <VideoCategory
+            onCategorySelect = {selectedVideo => (this.setState({selectedVideo}))}
+            videos = {videos} />
         </div>
       </div>
     );
