@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-
 import VideoList from './components/videoList';
 import VideoDescp from './components/videoDescp';
 import videos from './videos';
@@ -12,9 +11,7 @@ class App extends Component{
       selectedVideo: videos[0],
     };
   }
-
-
-
+  // At start, the slected video is the first video in the list
   render(){
     return(
       <div>

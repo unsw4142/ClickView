@@ -9,7 +9,7 @@ const VideoDescp = ({video}) => {
   const url = video.thumbnail;
 
   return(
-    <div className="col-md-8">
+    <div className="video-detail col-md-8">
       <div className="thumbnail">
         <img className="img-responsive" src = {url} />
       </div>
